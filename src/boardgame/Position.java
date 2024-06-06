@@ -36,7 +36,11 @@ public class Position {
 		return row + ", " + column; 
 	}
 	
-	public void setValues(int row, int column) {}
+	//Operação para atualizar os valores de uma posição
+	public void setValues(int row, int column) {
+		this.row = row;
+		this.column = column;
+	}
 
 	
 }
