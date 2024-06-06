@@ -3,10 +3,13 @@ package application;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import boardgame.Board;
 import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
+import chess.Color;
+import chess.pieces.King;
 
 public class Program {
 

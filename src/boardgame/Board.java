@@ -16,8 +16,6 @@ public class Board {
 		}
 		pieces = new Piece [rows][column];
 //		Adicionando exceções para criação do tabuleiro
-		
-	
 	}
 
 
