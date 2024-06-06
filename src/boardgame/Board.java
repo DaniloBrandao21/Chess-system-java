@@ -44,6 +44,7 @@ public class Board {
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
+//	placePiece -> Coloca peça em uma posição
 	public void placePiece(Piece piece, Position position) {
 		if(thereIsAPiece(position)) {
 			throw new BoardException("There is alredy a piece on position " + position);
@@ -51,6 +52,28 @@ public class Board {
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
+	
+//	removePiece -> Remover uma peça da matrix
+	public Piece removePiece(Position position) {
+		if(!positionExists(position)) {
+			throw new BoardException("Position not on the board");
+		}
+		if(piece(position) == null) {
+			return null;
+		}
+		
+		Piece aux = piece(position);
+		aux.position = null;
+		
+//		Indica que na matrix de peças, nessa posição, agora tem um null
+		pieces[position.getRow()][position.getColumn()] = null;
+//		retorna a peça que foi retirada 
+		return aux;
+		
+	}
+	
+	
+	
 //	Em determinado momento será mais facil consultar a posição através das linhas e colunas 
 	private boolean positionExists(int row, int column) {
 		//Verificando se a posição existe
