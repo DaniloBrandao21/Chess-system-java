@@ -35,7 +35,7 @@ public class ChessPosition {
 //	ex: posição (7,8) -> H2
 //	linha/coluna -> coluna/linha
 	protected static ChessPosition fromPosition(Position position) {
-		return new ChessPosition((char)('a' - position.getColumn()), 8 - position.getRow());
+		return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());
 	}
 	
 	@Override

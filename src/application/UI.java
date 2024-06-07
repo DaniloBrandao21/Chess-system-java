@@ -68,8 +68,12 @@ public class UI {
 		System.out.println();
 		printCapturedPieces(captured);
 		System.out.println();
+		System.out.println();
 		System.out.println("Turn: " + chessMatch.getTurn());
 		System.out.println("Waiting player: " + chessMatch.currentPlayer());
+		if(chessMatch.getCheck()){
+			System.out.println("CHECK!");
+		}
 	}
 		
 //		Método para imprimir o tabuleiro
